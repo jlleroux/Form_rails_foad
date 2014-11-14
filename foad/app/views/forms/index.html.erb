@@ -1,0 +1,24 @@
+<h1>salut</h1>
+
+<%= form_for :form do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :comment %><br>
+    <%= f.text_area :comment %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<h2>Liste</h2>
+<% @forms.each do |r| %>
+    <ul>
+      <li><%= r.title %> :: <%= r.comment %></li>
+    </ul>
+  <% end %>
